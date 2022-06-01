@@ -33,8 +33,14 @@ const database = {
             metalId: 3,
             sizeId: 2,
             styleId: 3,
+            typeId: 2,
             timestamp: 1614659931693
         }
+    ],
+    types: [
+        { id: 1, type: "Ring", multiplier: 1 },
+        { id: 2, type: "Earing", multiplier: 2 },
+        { id: 3, type: "Necklace", multiplier: 3 }
     ]
 }
 
@@ -54,6 +60,10 @@ export const getOrders = () => {
     return database.customOrders.map(order => ({...order}))
 }
 
+export const getTypes = () => {
+    return database.types.map(type => ({...type}))
+}
+
 export const setMetal = (id) => {
     database.orderBuilder.metalId = id
 }
@@ -64,6 +74,10 @@ export const setSize = (id) => {
 
 export const setStyle = (id) => {
     return database.orderBuilder.styleId = id
+}
+
+export const setType = (id) => {
+    return database.orderBuilder.typeId = id
 }
 
 export const addCustomOrder = () => {

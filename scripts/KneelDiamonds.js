@@ -3,6 +3,7 @@ import { DiamondSizes } from "./DiamondSizes.js"
 import { JewelryStyles } from "./JewelryStyles.js"
 import { Orders } from "./Orders.js"
 import { addCustomOrder } from "./database.js"
+import { Types} from "./Types.js"
 
 document.addEventListener(
     "click",
@@ -30,6 +31,11 @@ export const KneelDiamonds = () => {
                 <h2>Styles</h2>
                 ${JewelryStyles()}
             </section>
+
+        </article>
+
+        <article class="jewelryOptions">
+        ${Types()}
         </article>
 
         <article>
